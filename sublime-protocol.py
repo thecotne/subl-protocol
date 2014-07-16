@@ -1,4 +1,4 @@
-import sublime, sublime_plugin, re, sys, os
+import sublime, sublime_plugin, re, sys, os, tempfile
 
 reg_file = r"""Windows Registry Editor Version 5.00
 
@@ -28,22 +28,19 @@ if WINDOWS:
 	try:
 		with OpenKey( HKEY_CLASSES_ROOT,
 					 r'%s\shell\open\command' % protocol_name) as key:
-			val, _ = QueryValueEx(key, None)
-			if reg_val != val:
+			val = QueryValueEx(key, None)
+			if reg_val != val[0]:
 				raise WindowsError
 
 	except WindowsError:
-		with open('subl.reg', 'w+') as subl_reg_file:
-			reg_file = reg_file.replace('$sublime_text_file$',sublime_text_file.replace('\\','\\\\'))
-			reg_file = reg_file.replace('$protocol_name$',protocol_name)
-			subl_reg_file.write(reg_file)
-			subl_reg_file.close()
-		os.system('regedit /s "' +os.getcwd()+ '\\subl.reg"')
-
+		reg_file = reg_file.replace('$sublime_text_file$',sublime_text_file.replace('\\','\\\\'))
+		reg_file = reg_file.replace('$protocol_name$',protocol_name)
+		subl_reg_file = tempfile.NamedTemporaryFile(mode='w+',delete=False)
+		subl_reg_file.write(reg_file)
+		subl_reg_file.close()
+		os.system('regedit /s "' +subl_reg_file.name+ '" ')
 
 class OpenFileFromUrlCommand(sublime_plugin.WindowCommand):
 	def run(self,url):
 		replaced = re.sub('^subl://', '', url)
 		self.window.open_file(replaced,1)
-
-
