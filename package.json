@@ -4,9 +4,6 @@
 		{
 			"name": "subl protocol",
 			"details": "https://github.com/thecotne/sublime-protocol",
-			"author": "thecotne",
-			"homepage": "https://github.com/thecotne/sublime-protocol",
-			"readme": "https://raw.githubusercontent.com/thecotne/sublime-protocol/master/README.md",
 			"releases": [
 				{
 					"platforms": "windows",
