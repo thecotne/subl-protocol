@@ -2,7 +2,7 @@
 	"schema_version": "2.0",
 	"packages": [
 		{
-			"name": "sublime protocol",
+			"name": "subl protocol",
 			"details": "https://github.com/thecotne/sublime-protocol",
 			"author": "thecotne",
 			"homepage": "https://github.com/thecotne/sublime-protocol",
@@ -13,8 +13,7 @@
 					"sublime_text": ">=3000",
 					"details": "https://github.com/thecotne/sublime-protocol/tags"
 				}
-			],
-			"labels": ["protocol", "subl"]
+			]
 		}
 	]
 }
