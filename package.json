@@ -3,12 +3,12 @@
 	"packages": [
 		{
 			"name": "subl protocol",
-			"details": "https://github.com/thecotne/sublime-protocol",
+			"details": "https://github.com/thecotne/subl-protocol",
 			"releases": [
 				{
 					"platforms": "windows",
 					"sublime_text": ">=3000",
-					"details": "https://github.com/thecotne/sublime-protocol/tags"
+					"details": "https://github.com/thecotne/subl-protocol/tags"
 				}
 			]
 		}
