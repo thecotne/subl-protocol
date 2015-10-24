@@ -6,7 +6,7 @@
 			"details": "https://github.com/thecotne/subl-protocol",
 			"releases": [
 				{
-					"platforms": "windows",
+					"platforms": ["windows", "linux"],
 					"sublime_text": ">=3000",
 					"details": "https://github.com/thecotne/subl-protocol/tags"
 				}

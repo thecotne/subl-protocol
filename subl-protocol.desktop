@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=sublime text protocol
+Exec=subl --command "open_file_from_url {\"url\": \"%u\"}"
+Icon=utilities-terminal
+StartupNotify=false
+MimeType=x-scheme-handler/subl
