@@ -16,5 +16,7 @@ Note: Don't use backslash (\\)
 
 Note 2: on Windows It will ask for permissions when installing and uninstalling because it needs to edit registry
 
-Note 3: If you don't know how to install package from package control [click here](https://www.youtube.com/watch?v=N9rJJSiUy0I)
+Note 3: on Linux you need to have `subl` in your path
+
+Note 4: If you don't know how to install package from package control [click here](https://www.youtube.com/watch?v=N9rJJSiUy0I)
 
