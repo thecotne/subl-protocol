@@ -1,5 +1,6 @@
 import sublime, sublime_plugin, os, tempfile, re
 from os.path import dirname, realpath
+from urllib.parse import unquote
 
 protocol_name = 'subl'
 platform = sublime.platform()
@@ -11,7 +12,7 @@ class OpenFileFromUrlCommand(sublime_plugin.WindowCommand):
 			url = url[1:][:-1]
 
 		# subl://file.txt => file.txt
-		url = re.sub(r"^" + protocol_name + ":(\/\/)?", "", url)
+		url = unquote(re.sub(r"^" + protocol_name + ":(\/\/)?", "", url))
 
 		self.window.open_file(url, 1)
 
