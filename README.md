@@ -1,9 +1,8 @@
 subl protocol
 ================
 
-
 subl protocol adds `subl://` protocol
-so you can open file in sublime text from browser
+so you can open file in Sublime Text from browser
 
 This package is available over package control (search for `subl protocol`)
 
@@ -14,7 +13,7 @@ Syntax will be somthing like this
 ```
 Note: Don't use backslash (\\)
 
-Note 2: on Windows It will ask for permissions when installing and uninstalling because it needs to edit registry
+Note 2: on Windows it will ask for permissions when installing and uninstalling because it needs to edit registry
 
 Note 3: on Linux you need to have `subl` in your path
 
