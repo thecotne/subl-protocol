@@ -1,14 +1,14 @@
 {
-	"schema_version": "2.0",
+	"schema_version": "3.0.0",
 	"packages": [
 		{
 			"name": "subl protocol",
 			"details": "https://github.com/thecotne/subl-protocol",
 			"releases": [
 				{
-					"platforms": ["windows", "linux"],
 					"sublime_text": ">=3000",
-					"details": "https://github.com/thecotne/subl-protocol/tags"
+					"platforms": ["windows", "linux"],
+					"tags": true
 				}
 			]
 		}
