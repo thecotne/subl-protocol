@@ -32,17 +32,14 @@ def linux_plugin_loaded():
 	cmd = 'cp "{}/subl-protocol.desktop" ~/.local/share/applications/subl-protocol.desktop &&\
 			xdg-mime default subl-protocol.desktop x-scheme-handler/subl'
 
-	packagePath = dirname(realpath(__file__))
-
-	os.system(cmd.format(packagePath))
-
+	os.system(cmd.format(sublime.installed_packages_path()))
 
 
 def linux_plugin_unloaded():
 	os.system('rm ~/.local/share/applications/subl-protocol.desktop')
 
 def win_plugin_loaded():
-	sublime_text_file = os.path.dirname(sublime.__file__) + r'\sublime_text.exe'
+	sublime_text_file = sublime.executable_path()
 	reg_val = r'"$EXE" --command "open_file_from_url {\"url\": \"%1\"}"'
 	reg_val = reg_val.replace('$EXE', sublime_text_file)
 
