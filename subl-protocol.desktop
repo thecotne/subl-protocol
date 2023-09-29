@@ -4,4 +4,5 @@ Name=sublime text protocol
 Exec=subl --command "open_file_from_url {\"url\": \"%u\"}"
 Icon=utilities-terminal
 StartupNotify=false
+NoDisplay=true
 MimeType=x-scheme-handler/subl
