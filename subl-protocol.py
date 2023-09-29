@@ -29,10 +29,10 @@ def plugin_unloaded():
 		linux_plugin_unloaded()
 
 def linux_plugin_loaded():
-	cmd = 'cp "{}/subl-protocol.desktop" ~/.local/share/applications/subl-protocol.desktop &&\
+	cmd = 'cp "{}/subl protocol/subl-protocol.desktop" ~/.local/share/applications/subl-protocol.desktop &&\
 			xdg-mime default subl-protocol.desktop x-scheme-handler/subl'
 
-	os.system(cmd.format(sublime.installed_packages_path()))
+	os.system(cmd.format(sublime.packages_path()))
 
 
 def linux_plugin_unloaded():
